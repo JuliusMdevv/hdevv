@@ -1,5 +1,5 @@
 const container = document.getElementById("blog-container");
-
+const response = fetch("../../assets/data/blog.json");
 
 fetch("../../assets/data/blog.json")
     .then(response => response.json());
