@@ -19,16 +19,16 @@ fetch("../../assets/data/blog.json")
     //     blogs.sort((a,b) =>
     //         new Date(b.date) - new Date(a.date));  // Sort by date
     
-const article = document.createElement("article");
-        for(let blog in response){
+// const article = document.createElement("article");
+        for(let blog in response.json()){
             
-            article.innerHTML = `
+            container.innerHTML = `
                 <h2 class="blogTitle">${blog.title}</h2>
                 <h3 class="blogDate">${blog.date}</h3>
                 <p class="blogContent">${blog.content}</p>`;
             
         }
-container.appendChild(article);
+container.appendChild(container);
         // blogs.forEach(blog => {
             // const article = document.createElement("article");
 
