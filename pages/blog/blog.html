@@ -11,7 +11,9 @@
     
 
     <!-- <script src="../../js/blog.js"></script> -->
-     <script>const container = document.getElementById("blog-container");
+     <script>
+const container = document.getElementById("blog-container");
+let response = fetch("../../assets/data/blog.json").then(response => response.json());
 
 fetch("../../assets/data/blog.json")
     .then(response => response.json());
