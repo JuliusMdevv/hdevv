@@ -14,15 +14,10 @@
 
     <!-- <script src="../../js/blog.js"></script> -->
      <script>
-const container = document.getElementById("blog-container");
-let response = fetch("../../assets/data/blog.json").then(response => response.json());
 
-fetch("../../assets/data/blog.json")
-    .then(response => response.json());
-    // .then(blogs => {
-    //     blogs.sort((a,b) =>
-    //         new Date(b.date) - new Date(a.date));  // Sort by date
-    
+const container = document.getElementById("blog-container");
+let response = fetch("../../assets/data/blog.json");
+
 const article = document.getElementById("article");
         for(let blog in response){
             
@@ -33,14 +28,7 @@ const article = document.getElementById("article");
             
         }
 container.appendChild(article);
-        // blogs.forEach(blog => {
-            // const article = document.createElement("article");
 
-            
-                
-
-        
-        // });
-    // });</script>
+        </script>
 </body>
 </html>
