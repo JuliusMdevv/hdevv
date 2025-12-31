@@ -7,7 +7,9 @@
     <title>Blog Posts!</title>
 </head>
 <body>
-    <div id="blog-container" class="blog-container"></div>
+    <div id="blog-container" class="blog-container">
+        <div id="article"></div>
+    </div>
     
 
     <!-- <script src="../../js/blog.js"></script> -->
@@ -21,16 +23,16 @@ fetch("../../assets/data/blog.json")
     //     blogs.sort((a,b) =>
     //         new Date(b.date) - new Date(a.date));  // Sort by date
     
-// const article = document.createElement("article");
+const article = document.getElementById("article");
         for(let blog in response){
             
-            container.innerHTML = `
+            article.innerHTML = `
                 <h2 class="blogTitle">${blog.title}</h2>
                 <h3 class="blogDate">${blog.date}</h3>
                 <p class="blogContent">${blog.content}</p>`;
             
         }
-container.appendChild(container);
+container.appendChild(article);
         // blogs.forEach(blog => {
             // const article = document.createElement("article");
 
