@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+}
+
+#nav, #off-screen {
+    display: none;
+}
+
+@media (max-width:768px) {
+    #nav, #off-screen {
+        display: flex;
+    }
+
+
+    #off-screen {
+        flex-direction: column;
+        position: absolute;
+        background-color: #111;
+        opacity: 0.95;
+        width: 75vw;
+        height: 100vh;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    #off-screen a {
+        text-decoration: none;
+        color: aliceblue;
+        font-size: x-large;
+    }
+
+
+}
