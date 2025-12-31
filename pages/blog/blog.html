@@ -22,7 +22,7 @@ fetch("../../assets/data/blog.json")
     //         new Date(b.date) - new Date(a.date));  // Sort by date
     
 // const article = document.createElement("article");
-        for(let blog in response.json()){
+        for(let blog in response){
             
             container.innerHTML = `
                 <h2 class="blogTitle">${blog.title}</h2>
