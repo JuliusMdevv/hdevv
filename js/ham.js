@@ -4,8 +4,10 @@ const offScreen = document.getElementById('off-screen');
 const filename = window.location.pathname.split("/").pop();
 
 const test = document.createElement("test");
+
+const pages = fetch("../assets/data/pages.json").split("/").pop();
 test.innerHTML= `
-<h1>${filename.replace(".html", "")}</h1>
+<h1>${pages.replace(".html", "")}</h1>
 `;
 
 offScreen.appendChild(test);

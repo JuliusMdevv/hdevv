@@ -1,5 +1,39 @@
 body, html {
     margin: 0;
+    height: 100%;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+
+    background: 
+            radial-gradient(circle at 20% 30%, rgba(1, 73, 57, 0.4), transparent 60%),
+            radial-gradient(circle at 80% 20%, rgba(2, 56, 95, 0.4), transparent 60%),
+            radial-gradient(circle at 50% 80%, rgba(85, 1, 67, 0.4), transparent 60%),
+              #111; /* fallback dark bg */
+  background-blend-mode: screen; /* colors mix nicely */
+    }
+
+body::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+        135deg,          /* angle */
+        rgba(0,0,0,0.4) 0px,
+        rgba(0,0,0,0.4) 1px,
+        transparent 2px,
+        transparent 6px
+        );
+        pointer-events: none; /* don't block clicks */
+        z-index: -1;
 }
 
 #nav, #off-screen {
